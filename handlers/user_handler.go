@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"yourmodule/database"
-	"yourmodule/models"
+	"github.com/kjvmartinez/go-api-mongodb/database"
+	"github.com/kjvmartinez/go-api-mongodb/models"
 )
 
 const dbName = "go_api_db"
