@@ -19,7 +19,7 @@ A simple REST API built with Go (Gin) and MongoDB Atlas.
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/go-api-mongodb.git
+git clone https://github.com/kjvmartinez/go-api-mongodb.git
 cd go-api-mongodb
 ```
 
