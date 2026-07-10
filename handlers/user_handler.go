@@ -1,5 +1,11 @@
 package handlers
 
+
+// const (
+// 	dbName         = "go_api_db"
+// 	collectionName = "users"
+// )
+
 import (
 	"context"
 	"net/http"
@@ -11,8 +17,8 @@ import (
 	"github.com/kjvmartinez/go-api-mongodb/models"
 )
 
-const dbName = "go_api_db"
-const collectionName = "users"
+// const dbName = "go_api_db"
+// const collectionName = "users"
 
 // Create User
 func CreateUser(c *gin.Context) {
