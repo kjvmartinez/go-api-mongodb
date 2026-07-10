@@ -41,64 +41,29 @@ go run main.go
 
 Server starts at: `http://localhost:8000`
 
-## API Endpoints
+### Error Responses:
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/users` | Create new user |
-| GET | `/api/users` | Get all users |
-| GET | `/api/users/:id` | Get user by ID |
-| PUT | `/api/users/:id` | Update user |
-| DELETE | `/api/users/:id` | Delete user |
-
-## Example Requests
-
-### Create User
-```bash
-curl -X POST http://localhost:8000/api/users \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John Doe","email":"john@example.com","age":25}'
+**Missing Authorization Header:**
+```json
+{
+  "error": "missing authorization header"
+}
 ```
 
-### Get All Users
-```bash
-curl http://localhost:8000/api/users
+**Invalid Token:**
+```json
+{
+  "error": "invalid token"
+}
 ```
 
-### Get User by ID
-```bash
-curl http://localhost:8000/api/users/64a1b2c3d4e5f6g7h8i9j0k1
+**Unauthorized:**
+```json
+{
+  "error": "invalid email or password"
+}
 ```
 
-### Update User
-```bash
-curl -X PUT http://localhost:8000/api/users/64a1b2c3d4e5f6g7h8i9j0k1 \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Jane Doe","email":"jane@example.com","age":26}'
-```
-
-### Delete User
-```bash
-curl -X DELETE http://localhost:8000/api/users/64a1b2c3d4e5f6g7h8i9j0k1
-```
-
-## Project Structure
-go-api-mongodb/
-├── main.go                 # Entry point
-├── config/                 # Configuration
-│   └── config.go
-├── database/               # MongoDB connection
-│   └── database.go
-├── handlers/               # API handlers
-│   └── user_handler.go
-├── models/                 # Data models
-│   └── user.go
-├── middleware/             # Custom middleware
-│   └── cors.go
-├── go.mod                  # Dependencies
-├── .env                    # Environment variables
-├── .gitignore             # Git ignore rules
-└── README.md              # This file
 
 ## Technologies Used
 
